@@ -22,10 +22,10 @@ git clone https://github.com/nemkicsiaron/linked-leprechaun.git
 ```
 and then
 
-1. Open Chrome and go to chrome://extensions/.
+2. Open Chrome and go to chrome://extensions/.
 
-2. Enable "Developer mode" in the top right corner.
+3. Enable "Developer mode" in the top right corner.
 
-3. Click on "Load unpacked" and select the directory where you cloned/downloaded and unzipped the extension.
+4. Click on "Load unpacked" and select the directory where you cloned/downloaded and unzipped the extension.
 
-4. The LinkedIn Data Collector extension will now be installed and ready for use.
+5. The LinkedIn Data Collector extension will now be installed and ready for use.
