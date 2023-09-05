@@ -18,7 +18,7 @@ The LinkedIn Data Collector and Cover Letter Generator is a Chrome extension tha
 1. Clone this GitHub repository or download the source code as a ZIP file.
 
 ```bash
-git clone https://github.com/yourusername/linkedin-data-collector.git
+git clone https://github.com/nemkicsiaron/linked-leprechaun.git
 ```
 and then
 
