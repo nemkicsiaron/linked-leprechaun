@@ -1,38 +1,45 @@
 {
     "manifest_version": 3,
-    "name": "LinkedIn Data Processor",
+    "name": "LinkedIn Cover Letter Generator",
     "version": "1.0",
     "description": "Generate a cover letter from a LinkedIn job post.",
+    "author": "aronfszabo@gmail.com",
+    "incognito": "spanning",
+
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "scripting",
+      "contextMenus"
     ],
     "host_permissions": [
-      "https://www.linkedin.com/*"
+      "https://*.linkedin.com/*"
     ],
     "icons": {
-      "48": "./images/icon.ico"
+      "48": "./images/icon.png"
     },
     "background": {
       "service_worker": "background.js"
     },
-    "content_scripts": [
-      {
-        "matches": ["https://www.linkedin.com/*"],
+    "content_scripts": [{
+        "matches": ["https://*.linkedin.com/*"],
         "js": ["./scripts/linkedin_data.js"]
-      }
-    ],
+    }],
     "action": {
       "default_popup": "./popup/popup.html",
       "default_icon": {
-        "16": "./images/icon.ico",
-        "48": "./images/icon.ico",
-        "128": "./images/icon.ico"
+        "16": "./images/icon.png",
+        "48": "./images/icon.png",
+        "128": "./images/icon.png"
       }
     },
     "web_accessible_resources": [
       {
-        "resources": ["./scripts/linkedin_data.js"],
-        "matches": ["https://www.linkedin.com/*"]
+        "resources": ["./scripts/*"],
+        "matches": ["https://*.linkedin.com/*"]
       }
-    ]
+    ],
+    "options_ui": {
+      "page": "./options/options.html",
+      "open_in_tab": true
+    }
   }
