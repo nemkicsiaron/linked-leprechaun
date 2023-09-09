@@ -9,8 +9,9 @@ let User = {
 
 chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
     if(req.type === 'collect') {
-        console.log("AAAAA");
-        collect();
+        console.log(req);
+        console.log(req.message);
+        //collect();
     } else if(req.type === 'update-user') {
         User = req.newUser;
         console.log(User);

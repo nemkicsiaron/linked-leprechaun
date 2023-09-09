@@ -21,9 +21,9 @@
       "service_worker": "background.js"
     },
     "content_scripts": [{
-        "matches": ["https://*.linkedin.com/*"],
+        "matches": ["https://*.linkedin.com/jobs/*"],
         "js": ["./scripts/linkedin_data.js"],
-        "run_at": "document_end"
+        "run_at": "document_idle"
     }],
     "action": {
       "default_popup": "./popup/popup.html",
@@ -35,7 +35,7 @@
     },
     "web_accessible_resources": [
       {
-        "resources": ["./scripts/*"],
+        "resources":["./scripts/*"],
         "matches": ["https://*.linkedin.com/*"]
       }
     ],

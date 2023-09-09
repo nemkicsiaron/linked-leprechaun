@@ -9,7 +9,7 @@ let data;
 chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
     if(req.type === 'collect') {
         console.log(req);
-        data = collect();
+        //data = collect();
         sendResponse({type: 'thanks', message: 'tysm'});
     }
 });
