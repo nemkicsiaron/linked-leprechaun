@@ -1,8 +1,15 @@
+chrome.runtime.onMessage.addListener((req, sender, sendResponse) => {
+    if(req.type === 'collect') {
+        sendResponse(collect());
+    } else {
+        alert("ELSE RECEIVED");
+    }
+});
+
 const clean = (job_title) => {
     if(!job_title) return;
     return job_title
         .replace.replace(job_title.substring(job_title.indexOf('('), job_title.length), '')
-        .trim()
         .replace(job_title.substring(job_title.indexOf(' - '), job_title.length), '')
         .trim();
 }
@@ -18,5 +25,11 @@ const collect = () => {
         job: job
     }
 
+    console.log(data);
+
     return data;
+}
+
+const getCoverLetter = () => {
+
 }

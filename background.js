@@ -43,4 +43,12 @@ chrome.contextMenus.create(contextMenuItem);
 chrome.contextMenus.onClicked.addListener((onClickData) => {
     if(onClickData.menuItemId !== "linkedInCoverLetterGenerator") return;
     console.log("CONTEXTMENU CLICKED ");
+    (async () => {
+        const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
+        const response = await chrome.tabs.sendMessage(tab.id, {type: "collect", });
+        //const response = chrome.runtime.sendMessage({type: "collect", message: "hello world"});
+        console.log(tab);
+        // do something with response here, not outside the function
+        console.log(response);
+    })();
 });
